@@ -16,8 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import ask_retail_rag_ui
+from .views import ask_question
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path("ask/", ask_retail_rag_ui ),
+    path("ask/", ask_question ),
 ]
