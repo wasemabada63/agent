@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from analytics_bot.src.pipeline import ask_retail_rag_ui
 
-@api_view(['POST'])
+@api_view(['POST','GET'])
 def ask_question(request):
     if request.method == "GET":
         return Response({"question": "What is the best selling product in the last month?"})
