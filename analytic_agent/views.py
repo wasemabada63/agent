@@ -10,6 +10,7 @@ def ask_question(request):
     if request.method == "POST":
         question = request.data.get("question", "")
         out = ask_retail_rag_ui(question)
+        print(type(out))
         if isinstance(out,list):
             return Response(out[len(out)-1])
         else:
